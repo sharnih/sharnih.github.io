@@ -128,11 +128,7 @@ IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
     function do_line() {
       var main = document.getElementById('main');
-      if (t < 15) {
-        t += 1;
-      } else {
-        main.removeChild(document.getElementById('main').firstChild);
-      }
+
       text = sentences[p];
       p++;
       if (p >= sentences.length) { p = 0; }
@@ -140,6 +136,8 @@ IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
       last.appendChild(document.createTextNode(text[0]));
       last.setAttribute('class', text[1]);
       main.appendChild(last);
+
+      while ((main.scrollHeight + 20) > window.innerHeight) { main.removeChild(document.getElementById('main').firstChild); }
     }
 
     function poem() {
