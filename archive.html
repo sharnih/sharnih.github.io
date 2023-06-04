@@ -68,57 +68,74 @@ IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
     }
 
+    .line-container {
+      width: 100%;
+      display: flex;
+    }
+
+    .line {
+      width: 80%;
+    }
+
+    .margin {
+      color: rgb(144, 151, 151);
+      font-style: italic;
+      font-size: 13pt;
+      margin-left: 1pt;
+      align-self: flex-end;
+    }
+
     /* ]]> */
   </style>
   <script type="text/javascript">
     var t = 0;
     var p = 0;
     var sentences = [
-      ["PLEASE NOTE ★ ARCHIVE 151.2763.", "star"],
-      ["-How can I keep my memories safe?", "italic"],
-      ["-PD 5454 was the original standard for conservation and care of ███████████████ to ensure long-term preservation. ", "italic"],
-      ["In 2012, PD 5454 was withdrawn and replaced with the new standard BS EN 16893 (Conservation of Cultural Heritage) and BS4971:2017 (Conservation and Care of Archives and Library’s). ", "italic"],
-      ["These current standards provide guidance to institutions that allow a broader scope from the original PD 5454 specifications.", "italic"],
-      ["In February I caught the train from Melbourne to Sydney to see a friend.", ""],
-      ["As the train pulled into central station I vomited into a paper bag, and into my hair.", ""],
-      ["I warbled out of the station into a summer storm, rain that drenches you in mere minutes", ""],
-      ["'And all have now forgotten — looks and words And slops of beer; your coat with buttons off, Your gaunt chin and pricked eye, ", "footnote"],
-      ["and raging tales Of Irish kings and English perfidy, And dirtier perfidy of publicans Groaning to God from Darlinghurst'", "footnote"],
-      ["★", "star"],
-      ["In Sydney I feel surrounded by decay, summer heat rot.", ""],
-      ["We split our time between sweating under a Kmart fan and clambering through sweet smelling department stores to savour their air conditioning.", ""],
-      ["Over yum cha we’re discussing automation and I think about the pang of anxiety I feel when the ferry thumps over the harbour, ", ""],
-      ["in a way that feels out of the control of the driver, of the boat, and of the waves. I sit at the helm and laugh, giddy at the thump thump thump.", ""],
-      ["'In the mid January heat Sydney felt like it was decaying, the smell of leaf rot from the Port Jackson figs is potent in all my memories.", "footnote"],
-      ["In the park they towered over me, their roots pulling from the ground to resemble tendons'", "footnote"],
-      ["★", "star"],
-      ["I find myself thinking often about Deepstore,", ""],
-      ["an independent archival service that operates out of a salt mine in Cheshire.", ""],
-      ["They store, most notably, the National Archive’s public records. I think about this often because I once called my Mum from a train station in Cheshire, ", ""],
-      ["I knew she had lived there in her gap year and I was here on mine which felt serendipitous. ", ""],
-      [" -It’s a boring town", "italic"],
-      ["-Nice churches", "italic"],
-      ["★", "star"],
-      ["I feel like I’m wearing a hairshirt, while I lay threadbare on the beach in Manly. ", ""],
-      [" Open-booking myself on the sand as a kind of punishment. It’s punishment in that I don’t need to put myself through grief alone. ", ""],
-      [" In beauty, and in grief, I can’t stop thinking about posture. I’m zooming in.", ""],
-      ["For a moment just focusing the smallness of it all. My own hands as cogs turning over, counting down. ", ""],
-      ["We have the same hands, in a way.", ""],
-      ["Because these are the hands you gave to me, the hands instilled upon me before it was even a conscious choice.", ""],
-      ["There is sameness in the way our shoulders hunch,", ""],
-      [" in the way I feel, in the way the grief permeates through me. ", ""],
-      ["You gave that to me in the same way you gave me my hands, but it was never deliberate.", ""],
-      ["At the start of last winter I pulled out a jumper only the have it crumple in my hands, chewed on by moths.", ""],
-      ["It felt remarkably devastating, like it was destruction I had caused. ", ""],
-      ["Maybe it was, negligence, dismissal.", ""],
+      ["PLEASE NOTE ★ ARCHIVE 151.2763.", "star", "★ Five Bells, By Kenneth Slessor"],
+      ["-How can I keep my memories safe?", "",],
+      ["-PD 5454 was the original standard for conservation and care of ███████████████ to ensure long-term preservation. ", "italic", ""],
+      ["In 2012, PD 5454 was withdrawn and replaced with the new standard BS EN 16893 (Conservation of Cultural Heritage) and BS4971:2017 (Conservation and Care of Archives and Library’s). ", "italic", ""],
+      ["These current standards provide guidance to institutions that allow a broader scope from the original PD 5454 specifications.", "italic", ""],
+      ["In February I caught the train from Melbourne to Sydney to see a friend.", "", ""],
+      ["As the train pulled into central station I vomited into a paper bag, and into my hair.", "", ""],
+      ["I warbled out of the station into a summer storm, rain that drenches you in mere minutes", "", ""],
+      ["'And all have now forgotten — looks and words And slops of beer; your coat with buttons off, Your gaunt chin and pricked eye, ", "footnote", ""],
+      ["and raging tales Of Irish kings and English perfidy, And dirtier perfidy of publicans Groaning to God from Darlinghurst'", "footnote", ""],
+      ["★", "star", "", "★ short story I wrote, two years ago"],
+      ["In Sydney I feel surrounded by decay, summer heat rot.", "", ""],
+      ["We split our time between sweating under a Kmart fan and clambering through sweet smelling department stores to savour their air conditioning.", "", ""],
+      ["Over yum cha we’re discussing automation and I think about the pang of anxiety I feel when the ferry thumps over the harbour, ", "", ""],
+      ["in a way that feels out of the control of the driver, of the boat, and of the waves. I sit at the helm and laugh, giddy at the thump thump thump.", "", ""],
+      ["'In the mid January heat Sydney felt like it was decaying, the smell of leaf rot from the Port Jackson figs is potent in all my memories.", "footnote", ""],
+      ["In the park they towered over me, their roots pulling from the ground to resemble tendons'", "footnote", ""],
+      ["★", "star", ""],
+      ["I find myself thinking often about Deepstore,", "", ""],
+      ["an independent archival service that operates out of a salt mine in Cheshire.", "", ""],
+      ["They store, most notably, the National Archive’s public records. I think about this often because I once called my Mum from a train station in Cheshire, ", "", ""],
+      ["I knew she had lived there in her gap year and I was here on mine which felt serendipitous. ", "", ""],
+      [" -It’s a boring town", "italic", ""],
+      ["-Nice churches", "italic", ""],
+      ["★", "star", ""],
+      ["I feel like I’m wearing a hairshirt, while I lay threadbare on the beach in Manly. ", "", ""],
+      [" Open-booking myself on the sand as a kind of punishment. It’s punishment in that I don’t need to put myself through grief alone. ", "", ""],
+      [" In beauty, and in grief, I can’t stop thinking about posture. I’m zooming in.", "", ""],
+      ["For a moment just focusing the smallness of it all. My own hands as cogs turning over, counting down. ", "", ""],
+      ["We have the same hands, in a way.", "", ""],
+      ["Because these are the hands you gave to me, the hands instilled upon me before it was even a conscious choice.", "", ""],
+      ["There is sameness in the way our shoulders hunch,", "", ""],
+      [" in the way I feel, in the way the grief permeates through me. ", "", ""],
+      ["You gave that to me in the same way you gave me my hands, but it was never deliberate.", "", ""],
+      ["At the start of last winter I pulled out a jumper only the have it crumple in my hands, chewed on by moths.", "", ""],
+      ["It felt remarkably devastating, like it was destruction I had caused. ", "", ""],
+      ["Maybe it was, negligence, dismissal.", "", ""],
       ["Once, walking through the heat in mid march to get a covid test, I found a persimmon tree.", ""]
-      ["I took two and kept them in my bag among crumpled receipts and gum wrappers, ", ""],
-      ["only to pull them out later and find them full of worms. ", ""],
-      ["The archive, in the context of a museum is to care and preserve without change.", ""],
-      [" The archive, in the context of personhood is to care, to build upon and, to reinforce. ", ""],
-      [" I don’t know that I gain anything from mummification.", ""],
-      ["Could I take all my memories out and put them in Deepstore? ", ""],
-      ["Away from away from light and emotional lashes, or would I grow lichen inevitably?", "bold"],
+      ["I took two and kept them in my bag among crumpled receipts and gum wrappers, ", "", ""],
+      ["only to pull them out later and find them full of worms. ", "", ""],
+      ["The archive, in the context of a museum is to care and preserve without change.", "", ""],
+      [" The archive, in the context of personhood is to care, to build upon and, to reinforce. ", "", ""],
+      [" I don’t know that I gain anything from mummification.", "", ""],
+      ["Could I take all my memories out and put them in Deepstore? ", "", ""],
+      ["Away from away from light and emotional lashes, or would I grow lichen inevitably?", "bold", ""],
 
 
 
@@ -133,8 +150,19 @@ IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
       p++;
       if (p >= sentences.length) { p = 0; }
       last = document.createElement('div');
-      last.appendChild(document.createTextNode(text[0]));
-      last.setAttribute('class', text[1]);
+      last.setAttribute('class', 'line-container');
+
+      line = document.createElement('div');
+      line.appendChild(document.createTextNode(text[0]));
+      line.setAttribute('class', text[1] + " line");
+
+      margin = document.createElement('div');
+      margin.appendChild(document.createTextNode(text[2]));
+      margin.setAttribute('class', "margin");
+
+
+      last.appendChild(line);
+      last.appendChild(margin);
       main.appendChild(last);
 
       while ((main.scrollHeight + 20) > window.innerHeight) { main.removeChild(document.getElementById('main').firstChild); }
